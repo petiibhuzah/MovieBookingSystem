@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="643.0" prefWidth="1099.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moviebookingsystem.add.booking.AddBookingController">
+    <stylesheets>
+        <URL value="@addbooking.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="rootPane" layoutX="10.0" layoutY="10.0" prefHeight="660.0" prefWidth="1269.0" stylesheets="@../../../../../TransportFX-master/src/transportfx/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="105.0" prefWidth="1100.0" style="-fx-background-color: rgb(49, 68, 90,0.9);">
+               
+            </AnchorPane>
+            <AnchorPane layoutX="69.0" layoutY="45.0" prefHeight="235.0" prefWidth="436.0" style="-fx-background-color: rgb(255, 255, 255,0.9); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4;">
+               <children>
+                  <VBox layoutX="36.0" layoutY="58.0" prefHeight="134.0" prefWidth="244.0" spacing="8.0">
+                     <children>
+                        <JFXComboBox fx:id="customer_combo" prefHeight="25.0" prefWidth="244.0" promptText="Customer" style="-fx-font-size: 14;" />
+                        <JFXComboBox fx:id="comboTo" prefHeight="25.0" prefWidth="244.0" promptText="Movie" style="-fx-font-size: 14;" />
+                        <Label text="Select Booking Date " />
+                        <JFXDatePicker fx:id="txtDate">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </JFXDatePicker>
+                        <JFXTextField fx:id="txtSession" labelFloat="true" layoutX="10.0" layoutY="96.0" prefHeight="28.0" prefWidth="244.0" promptText="Session" unFocusColor="#a8a2a2">
+                           <font>
+                              <Font name="Roboto Medium" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </VBox>
+                  <JFXButton fx:id="btnPay" buttonType="RAISED" layoutX="315.0" layoutY="137.0" onAction="#bookTicket" prefHeight="33.0" prefWidth="96.0" style="-fx-background-color: rgb(49, 68, 90,0.9);" text="Book" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Medium" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutY="-2.0" prefHeight="40.0" prefWidth="427.0" style="-fx-background-color: rgb(0, 179, 160); -fx-background-radius: 4 4 0 0;" text="Book Ticket" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="GG_CIRCLE" size="24.0" wrappingWidth="27.0" />
+                     </graphic>
+                     <font>
+                        <Font name="Roboto Medium" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TitledPane animated="false" layoutY="306.0" prefHeight="461.0" prefWidth="1100.0" styleClass="titledPane" text="Bookings List Summary">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableTickets" layoutY="1.0" prefHeight="340.0" prefWidth="740.0" />
+                        <AnchorPane layoutX="744.0" layoutY="7.0" prefHeight="134.0" prefWidth="244.0" style="-fx-background-radius: 4; -fx-background-color: rgb(0, 170, 207,0.9); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Bookings" textFill="WHITE">
+                                 <font>
+                                    <Font name="Roboto Medium" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTicketsSold" alignment="CENTER" layoutX="34.0" layoutY="59.0" prefHeight="48.0" prefWidth="176.0" text="106" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Roboto Black" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="744.0" layoutY="147.0" prefHeight="134.0" prefWidth="244.0" style="-fx-background-radius: 4; -fx-background-color: rgb(0, 179, 160,0.9); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Total Revenue" textFill="WHITE">
+                                 <font>
+                                    <Font name="Roboto Medium" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotalSales" alignment="CENTER" layoutX="34.0" layoutY="60.0" prefHeight="48.0" prefWidth="176.0" text="Tshs. 30877" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Roboto Black" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

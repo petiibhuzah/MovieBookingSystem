@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MovieBookingSystem.jnlp">
+  <information>
+    <title>MovieBookingSystem</title>
+    <vendor>Peti Ibhuzah</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MovieBookingSystem.jar" size="61230" download="eager" />
+    <jar href="lib\controlsfx-8.40.12.jar" size="996389" download="eager" />
+    <jar href="lib\controlsfx-samples-8.40.12.jar" size="665038" download="eager" />
+    <jar href="lib\derby.jar" size="3230946" download="eager" />
+    <jar href="lib\derbyclient.jar" size="587986" download="eager" />
+    <jar href="lib\fontawesomefx-1.0.0-sources.jar" size="6615" download="eager" />
+    <jar href="lib\fontawesomefx-1.0.0.jar" size="18236" download="eager" />
+    <jar href="lib\fontawesomefx-8.8.jar" size="443326" download="eager" />
+    <jar href="lib\fxsampler-1.0.9.jar" size="30952" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2386350" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="MovieBookingSystem" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="moviebookingsystem.MovieBookingSystem"  name="MovieBookingSystem" />
+  <update check="always"/>
+</jnlp>

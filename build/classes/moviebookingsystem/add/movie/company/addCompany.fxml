@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="174.0" prefWidth="485.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="moviebookingsystem.add.movie.company.AddCompanyController">
+    <stylesheets>
+        <URL value="@addcompany.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="9.0" layoutY="10.0" prefHeight="203.0" prefWidth="491.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="cp_name" labelFloat="true" layoutX="60.0" layoutY="30.0" promptText="Company Name">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" left="50.0" right="50.0" top="50.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <HBox prefHeight="53.0" prefWidth="576.0">
+               <children>
+                  <JFXButton fx:id="saveButton" onAction="#save" prefHeight="35.0" prefWidth="173.0" text="SAVE" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="50.0" right="20.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="jfx-button" />
+                        <String fx:value="save-button" />
+                     </styleClass>
+                     <stylesheets>
+                        <URL value="@../../../../../../Mauzo%20App/src/mauzo/app/ui/addCategory/addCategory.css" />
+                        <URL value="@../category/addcategory.css" />
+                     </stylesheets>
+                  </JFXButton>
+                  <JFXButton fx:id="cancelButton" layoutX="60.0" layoutY="10.0" onAction="#cancel" prefHeight="37.0" prefWidth="156.0" stylesheets="@../category/addcategory.css" text="CANCEL" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="jfx-button" />
+                        <String fx:value="cancel-button" />
+                     </styleClass>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
