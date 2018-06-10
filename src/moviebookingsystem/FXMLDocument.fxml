@@ -38,12 +38,12 @@
                               <Font name="Roboto Black" size="16.0" />
                            </font>
                         </JFXButton>
-                        <JFXTextField fx:id="email_id" focusColor="#559af5" labelFloat="true" layoutX="101.0" layoutY="142.0" prefHeight="30.0" prefWidth="290.0" promptText="Enter email " style="-fx-text-fill: white;" unFocusColor="#948b8b">
+                        <JFXTextField fx:id="user_name" focusColor="#559af5" labelFloat="true" layoutX="101.0" layoutY="142.0" prefHeight="30.0" prefWidth="290.0" promptText="Enter User Name" style="-fx-text-fill: black;" unFocusColor="#948b8b">
                            <font>
                               <Font name="Roboto Medium" size="14.0" />
                            </font>
                         </JFXTextField>
-                        <JFXPasswordField fx:id="pass_id" focusColor="#5c69f8" labelFloat="true" layoutX="101.0" layoutY="201.0" prefHeight="28.0" prefWidth="290.0" promptText="Enter password" style="-fx-text-fill: white;" unFocusColor="#838282">
+                        <JFXPasswordField fx:id="pass" focusColor="#5c69f8" labelFloat="true" layoutX="101.0" layoutY="201.0" prefHeight="28.0" prefWidth="290.0" promptText="Enter password" style="-fx-text-fill: black;" unFocusColor="#838282">
                            <font>
                               <Font name="Roboto Medium" size="14.0" />
                            </font>

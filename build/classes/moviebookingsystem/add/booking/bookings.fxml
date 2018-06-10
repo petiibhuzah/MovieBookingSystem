@@ -7,14 +7,14 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="559.0" prefWidth="959.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="moviebookingsystem.add.booking.BookingsController">
+<AnchorPane id="AnchorPane" prefHeight="559.0" prefWidth="959.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moviebookingsystem.add.booking.BookingsController">
    <children>
       <AnchorPane id="AnchorPane" fx:id="rootPane" layoutX="20.0" layoutY="20.0" prefHeight="787.0" prefWidth="1289.0" stylesheets="@../../../../../TransportFX-master/src/transportfx/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -69,35 +69,15 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="tableTickets" layoutY="1.0" prefHeight="340.0" prefWidth="740.0" />
-                        <AnchorPane layoutX="744.0" layoutY="7.0" prefHeight="134.0" prefWidth="244.0" style="-fx-background-radius: 4; -fx-background-color: rgb(0, 170, 207,0.9); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
-                           <children>
-                              <Label layoutX="14.0" layoutY="14.0" text="Bookings" textFill="WHITE">
-                                 <font>
-                                    <Font name="Roboto Medium" size="16.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="lblTicketsSold" alignment="CENTER" layoutX="34.0" layoutY="59.0" prefHeight="48.0" prefWidth="176.0" text="106" textAlignment="CENTER" textFill="WHITE">
-                                 <font>
-                                    <Font name="Roboto Black" size="30.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="744.0" layoutY="147.0" prefHeight="134.0" prefWidth="244.0" style="-fx-background-radius: 4; -fx-background-color: rgb(0, 179, 160,0.9); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.1), 6.0, 0.7, 0.0,1.5);">
-                           <children>
-                              <Label layoutX="14.0" layoutY="14.0" text="Total Revenue" textFill="WHITE">
-                                 <font>
-                                    <Font name="Roboto Medium" size="16.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="lblTotalSales" alignment="CENTER" layoutX="34.0" layoutY="60.0" prefHeight="48.0" prefWidth="176.0" text="Tshs. 30877" textAlignment="CENTER" textFill="WHITE">
-                                 <font>
-                                    <Font name="Roboto Black" size="30.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
+                        <TableView fx:id="tableTickets" layoutY="1.0" prefHeight="430.0" prefWidth="1100.0">
+                           <columns>
+                              <TableColumn fx:id="bookings_id_col" prefWidth="157.0" text="   Booking ID" />
+                              <TableColumn fx:id="customer_col" prefWidth="188.0" text="    Customer Name" />
+                              <TableColumn fx:id="movie_col" prefWidth="218.0" text="              Movie" />
+                              <TableColumn fx:id="date_col" prefWidth="175.0" text="           Date" />
+                              <TableColumn fx:id="session_col" minWidth="4.0" prefWidth="184.0" text="        Session" />
+                              <TableColumn fx:id="created_at_col" prefWidth="176.0" text="    Created_at" />
+                           </columns></TableView>
                      </children>
                   </AnchorPane>
                </content>

@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moviebookingsystem.dashboard.DashboardController">
+<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="747.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="moviebookingsystem.dashboard.DashboardController">
     <stylesheets>
-        <URL value="@dashboard.css"/>
+        <URL value="@dashboard.css" />
     </stylesheets>
+   <children>
+      <HBox prefHeight="100.0" prefWidth="747.0">
+         <children>
+            <Label prefHeight="101.0" prefWidth="747.0" style="-fx-background-color: #0091EA;" text="DASHBOARD MOVIE BOOKING SYSTEM" textFill="#fcfafa">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox layoutY="100.0" prefHeight="438.0" prefWidth="256.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addCategory" prefHeight="84.0" prefWidth="261.0" text="ADD  MOVIE CATEGORY" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addCompany" prefHeight="87.0" prefWidth="256.0" text="ADD MOVIE COMPANY" />
+            <Button layoutX="10.0" layoutY="113.0" mnemonicParsing="false" onAction="#addMovie" prefHeight="75.0" prefWidth="256.0" text="ADD MOVIE" />
+            <Button layoutX="10.0" layoutY="216.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="100.0" prefWidth="256.0" text="ADD CUSTOMER" />
+            <Button layoutX="10.0" layoutY="271.0" mnemonicParsing="false" onAction="#bookTicket" prefHeight="101.0" prefWidth="257.0" text="BOOK TICKET" />
+         </children>
+      </VBox>
+      <AnchorPane layoutX="534.0" layoutY="100.0" prefHeight="438.0" prefWidth="212.0">
+         <children>
+            <VBox prefHeight="438.0" prefWidth="212.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#listategories" prefHeight="108.0" prefWidth="212.0" text="LIST CATEGORIES" />
+                  <Button mnemonicParsing="false" onAction="#listCompanies" prefHeight="108.0" prefWidth="212.0" text="LIST COMPANIES" />
+                  <Button mnemonicParsing="false" onAction="#listCustomers" prefHeight="117.0" prefWidth="212.0" text="LIST CUSTOMERS" />
+                  <Button mnemonicParsing="false" onAction="#listMovies" prefHeight="108.0" prefWidth="212.0" text="LIST MOVIES" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
