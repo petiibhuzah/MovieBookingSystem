@@ -130,7 +130,7 @@ public class DashboardController implements Initializable {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("/moviebookingsystem/list/movies/listMovies.fxml"));
             Stage stage = new Stage(StageStyle.DECORATED);
-            stage.setTitle("Add Category");
+            stage.setTitle("List Movies");
             stage.setScene(new Scene(parent));
             stage.show();
         } catch (IOException ex) {
@@ -143,7 +143,7 @@ public class DashboardController implements Initializable {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("/moviebookingsystem/list/users/listUsers.fxml"));
             Stage stage = new Stage(StageStyle.DECORATED);
-            stage.setTitle("Add Category");
+            stage.setTitle("List Users");
             stage.setScene(new Scene(parent));
             stage.show();
         } catch (IOException ex) {
